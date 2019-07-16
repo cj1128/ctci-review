@@ -1,0 +1,13 @@
+{
+  "name": "ctci-review",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "CJ Ting <cjting1128@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha questions/**/*.js"
+  },
+  "devDependencies": {
+    "mocha": "6.1.4"
+  }
+}
