@@ -5,7 +5,8 @@
   "author": "CJ Ting <cjting1128@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "mocha questions/**/*.js"
+    "test": "mocha questions/**/*.js -r pretest",
+    "mocha": "mocha -r pretest"
   },
   "devDependencies": {
     "mocha": "6.1.4"

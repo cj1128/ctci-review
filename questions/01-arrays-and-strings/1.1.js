@@ -24,8 +24,6 @@ const isUnique2 = str => {
 }
 
 /*----------  Test  ----------*/
-const assert = require("assert")
-
 const m = [
   ["", true],
   ["abcd", true],
@@ -33,15 +31,19 @@ const m = [
 ]
 
 describe("1.1", () => {
-  it("with a Set", () => {
+  describe("with a Set", () => {
     m.forEach(([str, expected]) => {
-      assert.equal(isUnique(str), expected)
+      it(`'${ str }': ${ expected }`, () => {
+        assert.equal(isUnique(str), expected)
+      })
     })
   })
 
-  it("without additional data structures", () => {
+  describe("without additional data structures", () => {
     m.forEach(([str, expected]) => {
-      assert.equal(isUnique2(str), expected)
+      it(`'${ str }': ${ expected }`, () => {
+        assert.equal(isUnique2(str), expected)
+      })
     })
   })
 })

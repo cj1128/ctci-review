@@ -1,6 +1,6 @@
 <div align="center">
   <h1>
-    Cracking the Coding Interview
+    Cracking the Coding Interview in JavaScript
   </h1>
 
   <img src="./cover.jpg" width="400">
@@ -15,7 +15,7 @@ However, we all have to do something we don't like. This is the cruel truth of l
 
 ## JS
 
-`yarn test`.
+`yarn test -g [grep]`.
 
 ## Questions
 
@@ -23,5 +23,21 @@ However, we all have to do something we don't like. This is the cruel truth of l
 
 > Implement an algorithm to determine if a string has all unique characters. What if you can't use additional data structures?
 
-- O(N): use a Set
-- O(NLogN): sort and one traversal
+Need to pay attention to string encoding, js can't handle non-BMP unicode strings out of the box.
+
+- O(N): Use a Set
+- O(NLogN): Sort and one traversal
+
+### 1.2 Check Permutation
+
+> Given two strings, write a function to decide if one is a permutation of the other.
+
+Also note the string encoding.
+
+O(NLogN): First check lengths of strings, if equal, sort and compare
+
+### 1.3 URLify
+
+> Write a method to replace all spaces in a string with '%20'
+
+O(N): Just use a regexp to replace.
