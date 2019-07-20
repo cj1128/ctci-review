@@ -30,7 +30,7 @@ Need to pay attention to string encoding, js can't handle non-BMP unicode string
 
 ### 1.2 Check Permutation
 
-> Given two strings, write a function to decide if one is a permutation of the other.
+> Given two strings, write a method to decide if one is a permutation of the other.
 
 Also note the string encoding.
 
@@ -41,3 +41,15 @@ O(NLogN): First check lengths of strings, if equal, sort and compare
 > Write a method to replace all spaces in a string with '%20'
 
 O(N): Just use a regexp to replace.
+
+### 1.4 Palindrome Permuatation
+
+> Given a string, write a function to check if it is a permutation of a palindrome.
+
+O(NLogN): Sort and one travesal, the string should have a pattern like `xxyyzz` or `xxyykzz`
+
+### 1.5 One Away
+
+> There are three types of edits that can be performed on strings: insert a character, remove a character or replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away.
+
+O(min(Length)): First, we compare the lengths. Then iterate the short string and compare characters.
