@@ -30,23 +30,24 @@ Need to pay attention to string encoding, js can't handle non-BMP unicode string
 
 ### 1.2 Check Permutation
 
+Like always, we need to pay attention to encoding when we handle strings.
+
 > Given two strings, write a method to decide if one is a permutation of the other.
 
-Also note the string encoding.
-
 O(NLogN): First check lengths of strings, if equal, sort and compare
+O(N): First check lengths of strings, then compare the character counts
 
 ### 1.3 URLify
 
 > Write a method to replace all spaces in a string with '%20'
 
-O(N): Just use a regexp to replace.
+O(N): Juse use an regexp.
 
 ### 1.4 Palindrome Permuatation
 
 > Given a string, write a function to check if it is a permutation of a palindrome.
 
-O(NLogN): Sort and one traversal, the string should have a pattern like `xxyyzz` or `xxyykzz`
+O(N): Count characters, there should be no odd or only one odd count of characters.
 
 ### 1.5 One Away
 

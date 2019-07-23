@@ -2,22 +2,16 @@ const compressStr = str => {
   if(str === "") return ""
 
   const result = []
-  let last = str[0]
-  let n = 1
-  for(let i = 1; i < str.length; i++)  {
-    if(str[i] === last) {
-      n++
-      continue
+  let n = 0
+  for(let i = 0; i < str.length; i++)  {
+    n++
+
+    if(str[i] !== str[i + 1] || i === str.length - 1) {
+      result.push(str[i])
+      result.push(n)
+      n = 0
     }
-
-    result.push(last)
-    result.push(n)
-    last = str[i]
-    n = 1
   }
-
-  result.push(last)
-  result.push(n)
 
   const resultStr = result.join("")
   return resultStr.length < str.length ? resultStr : str

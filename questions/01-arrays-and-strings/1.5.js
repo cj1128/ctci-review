@@ -19,7 +19,7 @@ const isOneAway = (str1, str2) => {
     return true
   }
 
-  for(let i = 0, j = 0; i < n1.length, j < n2.length; i++, j++) {
+  for(let i = 0, j = 0; i < n1, j < n2; i++, j++) {
     let diff = 0
     if(str1[i] !== str2[j]) {
       diff++

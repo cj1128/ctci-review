@@ -1,24 +1,25 @@
 const isPalindromePermutation = str => {
   str = str.replace(/\s/g, "").toLowerCase()
-  str = [...str].sort().join("")
-  const lengthEven = str.length % 2 === 0
+  const m = {}
 
-  let foundTheExtra = false
-
-  for(let i = 0; i < str.length - 1; i += 2) {
-    if(str[i] !== str[i+1]) {
-      if(lengthEven) return false
-
-      if(!foundTheExtra) {
-        foundTheExtra = true
-        i--
-      } else {
-        return false
-      }
+  for(let i = 0; i < str.length; i++) {
+    const c = str[i]
+    if(m[c] == null) {
+      m[c] = 1
+    } else {
+      m[c] += 1
     }
   }
 
-  return true
+  let oddCount = 0
+
+  for(let key in m) {
+    if(m[key] % 2 !== 0) {
+      oddCount += 1
+    }
+  }
+
+  return oddCount <= 1
 }
 
 /*----------  Test  ----------*/
