@@ -17,7 +17,7 @@ However, we all have to do something we don't like. This is the cruel truth of l
 
 `yarn test -g [grep]`.
 
-## Questions
+## Chapter 1 - Arrays and Strings
 
 ### 1.1 Is Unique
 
@@ -78,3 +78,23 @@ O(NxM): Two traversals. First we mark, then we zero out.
 > Assume you have a method isSubstring which checks if one string is a substring of another. Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring(e.g., 'waterbottle' is a rotation of 'erbottlewat').
 
 O(N): If s2 is a rotation of s1, it must be a substring if s1+s1.
+
+## Chapter 2 - Linked Lists
+
+### 2.1 Remove Dups
+
+> Write code to remove duplicates from an unsorted linked list. How would you solve this problem if a temporary buffer is not allowed?
+
+O(N): Use a Set and one traversal
+O(N^2): For each node, check remaining nodes for duplication
+
+### 2.2 Return Kth to Last
+
+> Implement an algorithm to find the kth to last element of a singly linked list.
+
+If we know the size of the linked list, then this problem is too trivial to be a test. So we can be sure that we don't know the size.
+
+We defined k such that passing k = 1 would return the last element, k = 2 would return the second to last element, and so on.
+
+O(N): One traversal with recursive
+O(N): One traversal with two pointers
