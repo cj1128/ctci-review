@@ -3,6 +3,8 @@ const newNode = (val, next) => ({
   next,
 })
 
+exports.newNode = newNode
+
 exports.arrayToList = arr => {
   if(arr.length === 0) return null
 

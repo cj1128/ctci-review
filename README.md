@@ -98,3 +98,24 @@ We defined k such that passing k = 1 would return the last element, k = 2 would 
 
 O(N): One traversal with recursive
 O(N): One traversal with two pointers
+
+### 2.3 Delete Middle Node
+
+> Implement an algorithm to delete a node in the middle (i.e., any node but the first and the last node, not necessarily the exact middle) of a singly linked list, given only access to that node.
+
+O(1): The only thing we can do is to copy the data from the next node to the current node and then to free the next node.
+
+### 2.4 Partition
+
+> Write code to partition a linked list around a value x, such that all nodes less than x come before all nodes greater than or equal to x. If x is contained within the list, the values of x only need to be after the elements less than x. The partition element x can appear anywhere in the "right partition"; it does not need to appear between the left and right partitions.
+
+O(N): One time traversal, store nodes in two seperate arrays, one for less than x, one for greater than or equal to x. Then merge two arrays and modify `next` pointer.
+
+### 2.5 Sum Lists
+
+> You have two numbers representd by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1's digit is at the head of the list. Write a function taht adds the two numbers and returns the sum as a linked list.
+> Suppose the digits are stored in forward order. Repeat the above problem.
+
+Reverse Order, O(Max Length): One time traversal, recursively add digits
+
+Forward Order, O(Max Length): First we need to pad short list with 0s, then recursively add digits

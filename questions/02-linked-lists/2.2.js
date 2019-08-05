@@ -5,12 +5,14 @@ const f = (list, n) => {
   return { index: index + 1, val: list.val }
 }
 
+// recursive
 const kthToLast = (list, k) => {
   const { index, val } = f(list, k)
   if(index === k) return val
   return null
 }
 
+// iterative
 const kthToLast2 = (list, k) => {
   let p1 = list
   let p2 = list
