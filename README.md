@@ -119,3 +119,22 @@ O(N): One time traversal, store nodes in two seperate arrays, one for less than 
 Reverse Order, O(Max Length): One time traversal, recursively add digits
 
 Forward Order, O(Max Length): First we need to pad short list with 0s, then recursively add digits
+
+### 2.6 Palindrome
+
+> Implement a function to check if a linked list is a palindrome.
+
+O(N): Use a stack and fast runner / slow runner technique. At each step, push the data from the slow runner onto the stack. When the fast runner hits the end end of the list, the slow runner will be at the middle of the linked list. Then we can compare the value poped from the stack with value in the other half.
+
+### 2.7 Interesction
+
+> Given two singly linked lists, determine if the two lists interest. Return the intersecting node. Note that the intersection is defined based on reference, not value.
+
+O(M + N): First we traverse two lists to get their lengths. There is a simple fact: if there is intersection, then the tail node of two lists must be same.
+
+### 2.8 Loop Detection
+
+> Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop.
+
+O(N): Use a set. This will cost us O(N) additional space.
+O(N): Two pointers technique. We use a slow pointer and a fast pointer. Move slow pointer one step at a time and fast pointer two steps at a time. They must collide at a node. We say the "non-looped" part of the list has length m. We can be sure that both the collision point and the head are m steps from the loop start.
