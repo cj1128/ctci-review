@@ -138,3 +138,14 @@ O(M + N): First we traverse two lists to get their lengths. There is a simple fa
 
 O(N): Use a set. This will cost us O(N) additional space.
 O(N): Two pointers technique. We use a slow pointer and a fast pointer. Move slow pointer one step at a time and fast pointer two steps at a time. They must collide at a node. We say the "non-looped" part of the list has length m. We can be sure that both the collision point and the head are m steps from the loop start.
+
+## Chapter 3 - Stacks and Queues
+
+### 3.1 Three in One
+
+> Describe how you could use a single array to implement three stacks.
+
+Simple version: If we don't consider maximum the flexibility, that is if one stack is one of space we should make it grow and make others shrink. Then we can just divide the space and create three stacks. It's trivial.
+
+Complex version: Dynamically adjust the size of stack. This clearly needs more code but is not that complicated.
+
