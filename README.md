@@ -149,3 +149,10 @@ Simple version: If we don't consider maximum the flexibility, that is if one sta
 
 Complex version: Dynamically adjust the size of stack. This clearly needs more code but is not that complicated.
 
+### 3.2 Stack Min
+
+> How would you design a stack which, in addition to push and pop, has a function min which returns the minimum element? Push, pop and min should all operate in O(1) time.
+
+We can just use a variable to keep track of the minimum value. But the problem is that if we push/pop the stack, the minimum will change and we have to go through the stack to get the minimum which can't finish in O(1) time.
+
+So the solution is we use a separate stack to store the minimums.
