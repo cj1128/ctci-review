@@ -156,3 +156,35 @@ Complex version: Dynamically adjust the size of stack. This clearly needs more c
 We can just use a variable to keep track of the minimum value. But the problem is that if we push/pop the stack, the minimum will change and we have to go through the stack to get the minimum which can't finish in O(1) time.
 
 So the solution is we use a separate stack to store the minimums.
+
+### 3.3 Stack of Plates
+
+> Implement a data structure SetOfStacks. SetOfStacks should be composed of several stacks and should create a new stack once the previous one exceeds capacity. SetOfStacks.push() and SetOfStacks.pop() should behave identically to a single stack.
+> Implement a function popAt(int index) which performs a pop operation on a specific substack
+
+The first problem is farily simple. We just use a bunch of stacks.
+
+The follow up is a bit trickier. We have two options:
+
+- First, we implement a "rollup" system. If we pop an element from stack N, we need to remove the bottom of stack N+1 and push it onto stack N and so on and so forth. This is a lot of work, but it's not complex.
+- Second, we could just leave the hole alone, which means that some of our stacks may not have full capacity.
+
+There is no right answer, it all depends on requirements.
+
+### 3.4 Queue via Stacks
+
+> Implement a MyQueue data structure which consists of two stacks
+
+Queue has two operations: enqueue and dequeue. Stack has two operations: push and pop. So How do we implement a queue using two stacks?
+
+We store all elements into one stack when enqueue. When dequeue, we push and pop all elements into the other stack and pop from it.
+
+### 3.5 Sort Stack
+
+> Write a program to sort a stack such that the smallest items are on the top. You can use an additional temporary stack. The stack supports the following operations: push, pop, peek, and isEmpty.
+
+We can implementa a basic sorting algorithm. 
+
+We use a tmp stack T storing sorted elements where biggest items are on the top. 
+
+We push an element E from stack S, if it's bigger than the top element in the T, we just push it to T. If not, we push all elements which are bigger than E to S, then we push E and we push those elements back to T.
