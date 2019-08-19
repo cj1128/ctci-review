@@ -188,3 +188,9 @@ We can implementa a basic sorting algorithm.
 We use a tmp stack T storing sorted elements where biggest items are on the top. 
 
 We push an element E from stack S, if it's bigger than the top element in the T, we just push it to T. If not, we push all elements which are bigger than E to S, then we push E and we push those elements back to T.
+
+### 3.6 Animal Shelter
+
+> An animal shelter, which holds only dogs and cats, operates on a strictly "first in, first out" basis. People must adopt either the "oldest" (based on arrival tiime) of all animals at the shelter, or they can select whether they would prefer a dog or a cat (and will receive the oldest animal of that type). They can't select which specific animal they would like. Create the data structures to maintain this system and implement operations such as enqueue, dequeueAny, dequeueDog, and dequeueCat. You may use the built-in LinkedList data structure.
+
+Use two queues to store dogs and cats separately.
